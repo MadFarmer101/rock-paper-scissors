@@ -12,9 +12,27 @@ describe('User can see all the elements on the Home page', () => {
         cy.get('#players-score').should('contain', 'Player wins:')
         cy.get('#computers-score').should('contain', 'Computer wins:')
     })
+
+    it('Displays a rock button', () => {
+        cy.get('#rock').should('exist');
+    })
+
+    it('Displays a paper button', () => {
+        cy.get('#paper').should('exist');
+    })
+
+    it('Displays a scissors button', () => {
+        cy.get('#scissors').should('exist');
+    })
   
     it('Displays a start game button', () => {
         cy.get('#game-button').should('exist');
+    })
+
+    it('Displays players and computers initial images', () => {
+        cy.get('#player').should('exist');
+        cy.get('#computer').should('exist');
+
     })
         
     it('Displays the game rules', () => {
