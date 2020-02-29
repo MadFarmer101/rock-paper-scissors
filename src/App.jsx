@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import paper from "../src/images/paper.png";
-import rock from "../src/images/rock.png";
-import scissors from "../src/images/scissors.png";
+import PlayersChoice from './PlayersChoice';
 
 
 
-function App() {
+const items = ["rock", "paper", "scissors"];
+class App extends Component {
+  state = {
+    player: items[0],
+    computer: items[0]
+  };
+  selectItem = item => {
+    this.setState({
+      player: item
+    });
+  };
+  render() {
+    const { player, computer } = this.state;
   return (
     <div className="App">
       <div id="scoreboard">
@@ -18,18 +28,34 @@ function App() {
         <p id="rules">Paper beats Rock</p>
       </div>
       <div>
-        <img id="player" src={rock}></img>
-        <img id="computer" src={rock}></img>
+        <PlayersChoice item={player} />
+        <PlayersChoice item={computer} />
       </div>
       <div>
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
+      <button
+            id="rock" className="weaponBtn"
+            onClick={() => this.selectItem("rock")}
+          >
+            rock
+          </button>
+          <button
+            id="paper" className="weaponBtn"
+            onClick={() => this.selectItem("paper")}
+          >
+            paper
+          </button>
+          <button
+            id="scissors" className="weaponBtn"
+            onClick={() => this.selectItem("scissors")}
+          >
+            scissor
+          </button>
       </div>
       <button id="game-button">Let's Go!</button>
     </div>
     
   );
+  }
 }
 
 export default App;

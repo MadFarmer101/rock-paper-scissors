@@ -28,12 +28,6 @@ describe('User can see all the elements on the Home page', () => {
     it('Displays a start game button', () => {
         cy.get('#game-button').should('exist');
     })
-
-    it('Displays players and computers initial images', () => {
-        cy.get('#player').should('exist');
-        cy.get('#computer').should('exist');
-
-    })
         
     it('Displays the game rules', () => {
         cy.get('#rules').should('contain', 'Paper beats Rock')
