@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import PlayersChoice from './PlayersChoice';
+import ComputersChoice from './ComputersChoice';
+
 
 
 
@@ -10,6 +12,13 @@ class App extends Component {
     player: items[0],
     computer: items[0]
   };
+  startGame = () => {
+    this.setState({
+      computer: items[Math.floor(Math.random() * items.length)]
+    })
+  }
+
+
   selectItem = item => {
     this.setState({
       player: item
@@ -27,31 +36,34 @@ class App extends Component {
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
       </div>
-      <div>
+      <div id="battle">
         <PlayersChoice item={player} />
-        <PlayersChoice item={computer} />
+        <ComputersChoice item={computer} />
       </div>
       <div>
       <button
             id="rock" className="weaponBtn"
             onClick={() => this.selectItem("rock")}
+            
           >
             rock
           </button>
           <button
             id="paper" className="weaponBtn"
             onClick={() => this.selectItem("paper")}
+            
           >
             paper
           </button>
           <button
             id="scissors" className="weaponBtn"
             onClick={() => this.selectItem("scissors")}
+          
           >
             scissor
           </button>
       </div>
-      <button id="game-button">Let's Go!</button>
+      <button id="game-button" onClick={this.startGame}>Let's Go!</button>
     </div>
     
   );

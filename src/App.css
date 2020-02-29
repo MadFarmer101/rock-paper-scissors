@@ -13,6 +13,10 @@
   color: white;
 }
 
-#computer {
+.computer-image {
   transform: scaleX(-1);
+}
+
+#battle {
+  display: inline-flex;
 }
