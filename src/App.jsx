@@ -10,7 +10,8 @@ const items = ["rock", "paper", "scissors"];
 class App extends Component {
   state = {
     player: items[0],
-    computer: items[0]
+    computer: items[0],
+    message: ""
   };
 
   startGame = () => {
@@ -24,6 +25,22 @@ class App extends Component {
       player: item
     });
   };
+
+  playingGame = () => {
+    const { player, computer } = this.state
+    
+    if ( player === computer ) {
+      return "It's a Tie!"
+    } else if (
+      ( player === "rock" && computer === "scissors") ||
+      ( player === "paper" && computer === "rock") ||
+      ( player === "scissors" && computer === "paper")
+    ) {
+      return "Nice! You Win!"
+    } else {
+      return "Computer Wins!"
+    }
+  }
 
   render() {
     const { player, computer } = this.state;
