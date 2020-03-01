@@ -18,11 +18,15 @@ class App extends Component {
     this.setState({
       computer: items[Math.floor(Math.random() * items.length)],
     })
+    this.setState({
+      message: this.playingGame()
+    })
   }
 
   selectItem = item => {
     this.setState({
-      player: item
+      player: item,
+      message: ""
     });
   };
 
@@ -43,7 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const { player, computer } = this.state;
+    const { player, computer, message } = this.state;
   return (
     <div className="App">
       <div id="scoreboard">
@@ -62,6 +66,7 @@ class App extends Component {
         <PlayersChoice item={player} />
         <ComputersChoice item={computer} />
       </div>
+      <div className="message"> { message ? this.playingGame() : null }</div>
       <div>
         <button
             id="rock"
@@ -85,8 +90,7 @@ class App extends Component {
             scissors
           </button>
       </div>
-   
-     </div>
+    </div>
     
   );
   }
