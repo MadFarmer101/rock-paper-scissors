@@ -12,25 +12,30 @@ class App extends Component {
     player: items[0],
     computer: items[0]
   };
+
   startGame = () => {
     this.setState({
-      computer: items[Math.floor(Math.random() * items.length)]
+      computer: items[Math.floor(Math.random() * items.length)],
     })
   }
-
 
   selectItem = item => {
     this.setState({
       player: item
     });
   };
+
   render() {
     const { player, computer } = this.state;
   return (
     <div className="App">
       <div id="scoreboard">
-        <h3 id="players-score">Player wins:</h3>
-        <h3 id="computers-score">Computer wins:</h3>
+        <h3>Player</h3>
+        <h3>Computer</h3>
+      </div>
+      <div id="score">
+        <h3 id="players-score">0</h3>
+        <h3 id="computers-score">0</h3>
       </div>
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
@@ -41,30 +46,30 @@ class App extends Component {
         <ComputersChoice item={computer} />
       </div>
       <div>
-      <button
-            id="rock" className="weaponBtn"
-            onClick={() => this.selectItem("rock")}
+        <button
+            id="rock"
+            onClick={() => { this.selectItem("rock"); this.startGame()}}
             
           >
             rock
           </button>
           <button
-            id="paper" className="weaponBtn"
-            onClick={() => this.selectItem("paper")}
+            id="paper"
+            onClick={() => { this.selectItem("paper"); this.startGame()}}
             
           >
             paper
           </button>
           <button
-            id="scissors" className="weaponBtn"
-            onClick={() => this.selectItem("scissors")}
+            id="scissors"
+            onClick={() => { this.selectItem("scissors"); this.startGame()}}
           
           >
-            scissor
+            scissors
           </button>
       </div>
-      <button id="game-button" onClick={this.startGame}>Let's Go!</button>
-    </div>
+   
+     </div>
     
   );
   }
