@@ -50,14 +50,6 @@ class App extends Component {
     const { player, computer, message } = this.state;
   return (
     <div className="App">
-      <div id="scoreboard">
-        <h3>Player</h3>
-        <h3>Computer</h3>
-      </div>
-      <div id="score">
-        <h3 id="players-score">0</h3>
-        <h3 id="computers-score">0</h3>
-      </div>
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
@@ -66,7 +58,7 @@ class App extends Component {
         <PlayersChoice item={player} />
         <ComputersChoice item={computer} />
       </div>
-      <div className="message"> { message ? this.playingGame() : null }</div>
+      <div className="message"> {message ? this.playingGame() : null}</div>
       <div>
         <button
             id="rock"
