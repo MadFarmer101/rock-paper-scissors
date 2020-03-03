@@ -1,23 +1,25 @@
-describe('Game is played by the rules', () => {
+describe('Game is played after player chooses an item', () => {
+
+    
     beforeEach(() => {
       cy.visit('/');
     })
 
-    it('player can choose paper', () => {
-        cy.get('#paper').click()
-        cy.get('.winner').should('exist', 'Player One Wins!')
+    it('player gets an outcame message after choosing rock', () => {
+        cy.get('#rock').click()
+        cy.get('.message').should('exist')
         
     })
 
-    it('player can choose paper', () => {
+    it('player gets an outcame message after choosing paper', () => {
         cy.get('#paper').click()
-        cy.get('.winner').should('contain', 'Computer Wins!')
+        cy.get('.message').should('exist')
         
     })
 
-    it('player can choose paper', () => {
-        cy.get('#paper').click()
-        cy.get('.winner').should('contain', "Oops it's a Tie!")
+    it('player gets an outcame message after choosing scissors', () => {
+        cy.get('#scissors').click()
+        cy.get('.message').should('exist')
         
     })
 })
