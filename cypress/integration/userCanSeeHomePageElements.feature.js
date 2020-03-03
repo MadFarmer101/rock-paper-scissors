@@ -8,11 +8,6 @@ describe('User can see all the elements on the Home page', () => {
         cy.get('#title').should('contain', 'Rock Paper Scissors')
     })
 
-    it('Displays a scoreboad', () => {
-        cy.get('#players-score').should('contain', 'Player wins:')
-        cy.get('#computers-score').should('contain', 'Computer wins:')
-    })
-
     it('Displays a rock button', () => {
         cy.get('#rock').should('exist');
     })
