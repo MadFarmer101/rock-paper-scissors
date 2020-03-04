@@ -8,11 +8,15 @@ import ComputersChoice from './ComputersChoice';
 
 const items = ["rock", "paper", "scissors"];
 class App extends Component {
-  state = {
-    player: items[0],
-    computer: items[0],
-    message: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      player: items[0],
+      computer: items[0],
+      message: ""
+    };
+  }
+
 
   startGame = () => {
     this.setState({
