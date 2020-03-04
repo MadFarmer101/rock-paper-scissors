@@ -7,6 +7,9 @@ describe("App component", () => {
   const items = ["rock", "paper", "scissors"];
   it("Tie game if both choose scissors", () => {
     wrapper
+      .find("#start")
+      .simulate("click")
+    wrapper
       .find("#scissors")
       .simulate("click")
       wrapper.setState({ computer: items[2] })
