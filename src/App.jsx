@@ -64,7 +64,7 @@ class App extends Component {
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
-        <button onClick={this.handleShow}>Let's Go!</button>
+        <button id="start" onClick={this.handleShow}>Let's Go!</button>
       </div>
       <div id="battle">
       {this.state.isGameActive ?
