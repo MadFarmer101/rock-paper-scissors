@@ -66,44 +66,35 @@ class App extends Component {
         <p id="rules">Paper beats Rock</p>
         <button id="start" onClick={this.handleShow}>Let's Go!</button>
       </div>
-      <div id="battle">
       {this.state.isGameActive ?
-        <PlayersChoice item={player} />
-        : null }
-        {this.state.isGameActive ?
-        <ComputersChoice item={computer} />
-        : null }
-      </div>
+        <div id="battle">
+          <PlayersChoice item={player} />
+          <ComputersChoice item={computer} />
+        </div>
+      : null}
       <div className="message"> {message ? this.playingGame() : null}</div>
-      <div>
-        {this.state.isGameActive ?
-        <button
+      {this.state.isGameActive ?
+        <div>
+          <button
             id="rock"
             onClick={() => { this.selectItem("rock"); this.startGame()}}
-            
           >
             rock
           </button>
-          : null }
-          {this.state.isGameActive ?
           <button
             id="paper"
             onClick={() => { this.selectItem("paper"); this.startGame()}}
-            
           >
             paper
           </button>
-          : null }
-          {this.state.isGameActive ?
           <button
             id="scissors"
             onClick={() => { this.selectItem("scissors"); this.startGame()}}
-          
           >
             scissors
           </button>
-          : null }
-      </div>
+        </div>
+      : null }
     </div>
     
   );
