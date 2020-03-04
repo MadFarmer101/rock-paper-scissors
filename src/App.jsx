@@ -14,13 +14,20 @@ class App extends Component {
       player: items[0],
       computer: items[0],
       message: "",
-      isGameActive: false
+      isGameActive: false,
+      isStartButtonActive: true
     };
   }
 
   handleShow = () => {
     this.setState({
-      isGameActive:true
+      isGameActive: true
+    })
+  }
+
+  handleHide = () => {
+    this.setState({
+      isStartButtonActive: false
     })
   }
 
@@ -64,7 +71,9 @@ class App extends Component {
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
-        <button id="start" onClick={this.handleShow}>Let's Go!</button>
+        {this.state.isStartButtonActive ?
+          <button id="start" onClick={() => { this.handleShow(); this.handleHide()}}>Let's Go!</button>
+        : null}
       </div>
       {this.state.isGameActive ?
         <div id="battle">

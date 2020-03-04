@@ -55,7 +55,7 @@ describe('User can see match elements after pressing start game button', () => {
         cy.get('#rules').should('contain', 'Paper beats Rock')
     })
 
-    it('Does not display a scissors button', () => {
+    it('Does not display start game button', () => {
         cy.get('#start').should('not.exist');
     })
 })
