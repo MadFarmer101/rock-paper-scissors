@@ -8,11 +8,29 @@ import ComputersChoice from './ComputersChoice';
 
 const items = ["rock", "paper", "scissors"];
 class App extends Component {
-  state = {
-    player: items[0],
-    computer: items[0],
-    message: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      player: items[0],
+      computer: items[0],
+      message: "",
+      isGameActive: false,
+      isStartButtonActive: true
+    };
+  }
+
+  handleShow = () => {
+    this.setState({
+      isGameActive: true
+    })
+  }
+
+  handleHide = () => {
+    this.setState({
+      isStartButtonActive: false
+    })
+  }
+
 
   startGame = () => {
     this.setState({
@@ -53,35 +71,39 @@ class App extends Component {
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
+        {this.state.isStartButtonActive ?
+          <button id="start" onClick={() => { this.handleShow(); this.handleHide()}}>Let's Go!</button>
+        : null}
       </div>
-      <div id="battle">
-        <PlayersChoice item={player} />
-        <ComputersChoice item={computer} />
-      </div>
+      {this.state.isGameActive ?
+        <div id="battle">
+          <PlayersChoice item={player} />
+          <ComputersChoice item={computer} />
+        </div>
+      : null}
       <div className="message"> {message ? this.playingGame() : null}</div>
-      <div>
-        <button
+      {this.state.isGameActive ?
+        <div>
+          <button
             id="rock"
             onClick={() => { this.selectItem("rock"); this.startGame()}}
-            
           >
             rock
           </button>
           <button
             id="paper"
             onClick={() => { this.selectItem("paper"); this.startGame()}}
-            
           >
             paper
           </button>
           <button
             id="scissors"
             onClick={() => { this.selectItem("scissors"); this.startGame()}}
-          
           >
             scissors
           </button>
-      </div>
+        </div>
+      : null }
     </div>
     
   );
