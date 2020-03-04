@@ -13,8 +13,15 @@ class App extends Component {
     this.state = {
       player: items[0],
       computer: items[0],
-      message: ""
+      message: "",
+      isGameActive: false
     };
+  }
+
+  handleShow = () => {
+    this.setState({
+      isGameActive:true
+    })
   }
 
 
@@ -57,13 +64,19 @@ class App extends Component {
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules">Paper beats Rock</p>
+        <button onClick={this.handleShow}>Let's Go!</button>
       </div>
       <div id="battle">
+      {this.state.isGameActive ?
         <PlayersChoice item={player} />
+        : null }
+        {this.state.isGameActive ?
         <ComputersChoice item={computer} />
+        : null }
       </div>
       <div className="message"> {message ? this.playingGame() : null}</div>
       <div>
+        {this.state.isGameActive ?
         <button
             id="rock"
             onClick={() => { this.selectItem("rock"); this.startGame()}}
@@ -71,6 +84,8 @@ class App extends Component {
           >
             rock
           </button>
+          : null }
+          {this.state.isGameActive ?
           <button
             id="paper"
             onClick={() => { this.selectItem("paper"); this.startGame()}}
@@ -78,6 +93,8 @@ class App extends Component {
           >
             paper
           </button>
+          : null }
+          {this.state.isGameActive ?
           <button
             id="scissors"
             onClick={() => { this.selectItem("scissors"); this.startGame()}}
@@ -85,6 +102,7 @@ class App extends Component {
           >
             scissors
           </button>
+          : null }
       </div>
     </div>
     
