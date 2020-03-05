@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  margin-top: 4rem;
 }
 
 body {
   background-color: black;
+  background-image: url(./images/background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 840px 840px;
+  margin-bottom: 10rem;
 }
 
 @font-face {
@@ -38,6 +44,20 @@ body {
   font-size: 52px;
 }
 
+#start {
+  background-color: black;
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  
+}
+
 #rules1 {
   color: whitesmoke;
   font-family: chalk-header;
@@ -59,9 +79,64 @@ body {
   
 }
 
+#items {
+  justify-content: 
+}
+
+#rock {
+  background-color: black;
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  
+}
+
+#paper {
+  background-color: black;
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  
+}
+
+#scissors {
+  background-color: black;
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+}
+
+#dirt {
+  position: absolute;
+  margin-left: 10rem;
+  margin-top: 2.5rem;
+}
+
 .message {
   color: whitesmoke;
   font-family: chalk-text;
+  font-size: 25px;
 }
 
 .computer-image {

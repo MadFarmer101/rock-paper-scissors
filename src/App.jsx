@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import PlayersChoice from './PlayersChoice';
 import ComputersChoice from './ComputersChoice';
+import dirt from "../src/images/dirt.png";
 
 
 
@@ -71,6 +72,7 @@ class App extends Component {
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
         <p id="rules1">Paper covers Rock!</p>
+        <img id="dirt" src={dirt} alt="" />
         <p id="rules2">Rock smashes Scissors!</p>
         <p id="rules3">Scissors cuts Paper!</p>
         {this.state.isStartButtonActive ?
@@ -85,7 +87,7 @@ class App extends Component {
       : null}
       <div className="message"> {message ? this.playingGame() : null}</div>
       {this.state.isGameActive ?
-        <div>
+        <div id="items">
           <button
             id="rock"
             onClick={() => { this.selectItem("rock"); this.startGame()}}
