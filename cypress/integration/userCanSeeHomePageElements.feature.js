@@ -9,7 +9,9 @@ describe('User can see all the elements on the Home page', () => {
     })
 
     it('Displays the game rules', () => {
-        cy.get('#rules').should('contain', 'Paper beats Rock')
+        cy.get('#rules1').should('contain', 'Paper covers Rock!')
+        cy.get('#rules2').should('contain', 'Rock smashes Scissors!')
+        cy.get('#rules3').should('contain', 'Scissors cuts Paper!')
     })
 
     it('Displays a title', () => {
@@ -52,7 +54,9 @@ describe('User can see match elements after pressing start game button', () => {
     })
 
     it('Displays the game rules', () => {
-        cy.get('#rules').should('contain', 'Paper beats Rock')
+        cy.get('#rules1').should('contain', 'Paper covers Rock!')
+        cy.get('#rules2').should('contain', 'Rock smashes Scissors!')
+        cy.get('#rules3').should('contain', 'Scissors cuts Paper!')
     })
 
     it('Does not display start game button', () => {
