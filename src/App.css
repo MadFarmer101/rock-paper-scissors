@@ -7,8 +7,18 @@ body {
 }
 
 @font-face {
-  src: url(./fonts/Chalk-Line.ttf);
+  src: url(./fonts/Blah.ttf);
+  font-family: chalk-text;
+}
+
+@font-face {
+  src: url(./fonts/SqueakyChalkSound.ttf);
   font-family: chalk-header;
+}
+
+@font-face {
+  src: url(./fonts/Chalk.ttf);
+  font-family: chalk;
 }
 
 .App-header {
@@ -24,15 +34,34 @@ body {
 
 #title {
   color: whitesmoke;
-  font-family: chalk-header;
+  font-family: chalk;
+  font-size: 52px;
 }
 
-#rules {
+#rules1 {
   color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  margin-right: 20rem;
+}
+
+#rules2 {
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  margin-left: 15rem;
+}
+
+#rules3 {
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  
 }
 
 .message {
   color: whitesmoke;
+  font-family: chalk-text;
 }
 
 .computer-image {
