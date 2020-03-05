@@ -1,16 +1,117 @@
 .App {
   text-align: center;
+  margin-top: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  background-color: black;
+  background-image: url(./images/background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 840px 840px;
+  margin-bottom: 17rem;
+}
+
+@font-face {
+  src: url(./fonts/Blah.ttf);
+  font-family: chalk-text;
+}
+
+@font-face {
+  src: url(./fonts/SqueakyChalkSound.ttf);
+  font-family: chalk-header;
+}
+
+@font-face {
+  src: url(./fonts/Chalk.ttf);
+  font-family: chalk;
+}
+
+#title {
+  color: whitesmoke;
+  font-family: chalk;
+  font-size: 42px;
+}
+
+#start {
+  background-color: black;
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+}
+
+#rules1 {
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 19px;
+  margin-right: 20rem;
+}
+
+#rules2 {
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 19px;
+  margin-left: 15rem;
+}
+
+#rules3 {
+  color: whitesmoke;
+  font-family: chalk-header;
+  font-size: 19px;
+  
+}
+
+.items {
+  background-color: black;
+  color: whitesmoke;
+  margin-left: 1rem;
+  width: 8.5rem;
+  font-family: chalk-header;
+  font-size: 24px;
+  border-style: dashed;
+  border-radius: 25%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+}
+
+button:hover {
+  cursor: grab;
+}
+
+#dirt {
+  position: absolute;
+  margin-left: 13rem;
+  margin-top: -2.8rem;
+  height: 110px;
+}
+
+#decoration {
+  position: absolute;
+  margin-left: -23rem;
+  margin-top: -1rem;
+  height: 160px;
+}
+
+#heart {
+  position: absolute;
+  margin-top: 22rem;
+  height: 60px;
+}
+
+.message {
+  color: whitesmoke;
+  font-family: chalk-text;
+  font-size: 25px;
 }
 
 .computer-image {
@@ -19,6 +120,7 @@
 
 #battle {
   display: inline-flex;
+
 }
 
 
