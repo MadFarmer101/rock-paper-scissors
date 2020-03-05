@@ -70,7 +70,7 @@ class App extends Component {
     <div className="App">
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
-        <p id="rules">Paper beats Rock</p>
+        <p id="rules">Paper covers Rock! Rock smashes Scissors! Scissors cuts Paper</p>
         {this.state.isStartButtonActive ?
           <button id="start" onClick={() => { this.handleShow(); this.handleHide()}}>Let's Go!</button>
         : null}
