@@ -3,6 +3,7 @@ import './App.css';
 import PlayersChoice from './PlayersChoice';
 import ComputersChoice from './ComputersChoice';
 import dirt from "../src/images/dirt.png";
+import decoration from "../src/images/decoration.png"
 
 
 
@@ -71,10 +72,11 @@ class App extends Component {
     <div className="App">
       <div>
         <h1 id="title">Rock Paper Scissors</h1>
-        <p id="rules1">Paper covers Rock!</p>
+        <p className="rules" id="rules1">Paper covers Rock!</p>
         <img id="dirt" src={dirt} alt="" />
-        <p id="rules2">Rock smashes Scissors!</p>
-        <p id="rules3">Scissors cuts Paper!</p>
+        <p className="rules" id="rules2">Rock smashes Scissors!</p>
+        <img id="decoration" src={decoration} alt="" />
+        <p className="rules" id="rules3">Scissors cuts Paper!</p>
         {this.state.isStartButtonActive ?
           <button id="start" onClick={() => { this.handleShow(); this.handleHide()}}>Let's Go!</button>
         : null}
@@ -87,21 +89,21 @@ class App extends Component {
       : null}
       <div className="message"> {message ? this.playingGame() : null}</div>
       {this.state.isGameActive ?
-        <div id="items">
-          <button
-            id="rock"
+        <div>
+          <button 
+            className="items" id="rock"
             onClick={() => { this.selectItem("rock"); this.startGame()}}
           >
             rock
           </button>
           <button
-            id="paper"
+            className="items" id="paper"
             onClick={() => { this.selectItem("paper"); this.startGame()}}
           >
             paper
           </button>
           <button
-            id="scissors"
+            className="items" id="scissors"
             onClick={() => { this.selectItem("scissors"); this.startGame()}}
           >
             scissors
