@@ -4,7 +4,7 @@ import PlayersChoice from './PlayersChoice';
 import ComputersChoice from './ComputersChoice';
 import dirt from "../src/images/dirt.png";
 import decoration from "../src/images/decoration.png"
-
+import heart from "../src/images/heart.png";
 
 
 
@@ -76,6 +76,7 @@ class App extends Component {
         <img id="dirt" src={dirt} alt="" />
         <p className="rules" id="rules2">Rock smashes Scissors!</p>
         <img id="decoration" src={decoration} alt="" />
+        <img id="heart" src={heart} alt="" />
         <p className="rules" id="rules3">Scissors cuts Paper!</p>
         {this.state.isStartButtonActive ?
           <button id="start" onClick={() => { this.handleShow(); this.handleHide()}}>Let's Go!</button>

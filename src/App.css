@@ -102,6 +102,12 @@ button:hover {
   height: 160px;
 }
 
+#heart {
+  position: absolute;
+  margin-top: 22rem;
+  height: 60px;
+}
+
 .message {
   color: whitesmoke;
   font-family: chalk-text;
@@ -114,7 +120,7 @@ button:hover {
 
 #battle {
   display: inline-flex;
-  position: relative
+
 }
 
 
