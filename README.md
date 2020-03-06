@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1bef35b-d1b8-4065-bd3c-130e67fedb3d/deploy-status)](https://app.netlify.com/sites/rock-paper-scissors101/deploys)
+
 # RPS Challenge
 ### Author   
 [Janko Radakovic](https://github.com/MadFarmer101/Rock-Paper-Scissors)
@@ -7,7 +9,7 @@ React v.16.12.0, CSS
 **Deployed at:** [Netlify](https://rock-paper-scissors101.netlify.com/) 
 
 ## The code   
-This application iThis application is everybodies favorite: Rock, Paper and Scissors game. You as a User play a game against the computer. You pick your item for the battle and Computer is programed to pick a random item. Selections are then compared and you can see a proper outcame message.
+This application is everybodies favorite: Rock, Paper and Scissors game. You as a User play a game against the computer. You pick your item for the battle and Computer is programed to pick a random item. Selections are then compared and you can see a proper outcame message.
 
 ## Getting started
 ### Dependencies  
@@ -67,5 +69,5 @@ I need to be able to see a Scoreboard.
 ## License  
 [MIT-license](https://en.wikipedia.org/wiki/MIT_License)
 ### Acknowledgement  
-[Craft Academy](https://craftacademy.se).  
+[Craft Academy](https://craftacademy.se)  
 
