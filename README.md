@@ -5,7 +5,7 @@
 [Janko Radakovic](https://github.com/MadFarmer101/Rock-Paper-Scissors)
 ## Built with  
 React v.16.12.0, CSS   
-**Testing frameworks:** Cypress  
+**Testing:** Cypress and Enzyme  
 **Deployed at:** [Netlify](https://rock-paper-scissors101.netlify.com/) 
 
 ## The code   

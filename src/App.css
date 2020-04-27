@@ -65,7 +65,6 @@ body {
   color: whitesmoke;
   font-family: chalk-header;
   font-size: 19px;
-  
 }
 
 .items {
@@ -120,7 +119,4 @@ button:hover {
 
 #battle {
   display: inline-flex;
-
 }
-
-
